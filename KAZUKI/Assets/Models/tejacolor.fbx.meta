@@ -3,7 +3,12 @@ guid: 7cad51d2729a4534faf6bad7e46663fd
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Torii 8 Painted Wood
+    second: {fileID: 4366405644982245730, guid: 712300d1be1cb7941ad6ed78ce210e4c, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
