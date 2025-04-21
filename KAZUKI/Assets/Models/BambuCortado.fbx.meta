@@ -8,17 +8,17 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Bamboo_wood_BaseColor
-    second: {fileID: 2800000, guid: fe4a539450181f14ca8ae1bf904b0ee2, type: 3}
+    second: {fileID: 2800000, guid: a13c79953fc4ea340bcd9e4d6c70f5d4, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Bamboo_wood_Metallic
-    second: {fileID: 2800000, guid: aa6b4dc397a393942a4e837f5340d548, type: 3}
+    second: {fileID: 2800000, guid: a76f69c89fd347b45bf358be0bcaeab7, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Bamboo_wood_Roughness
-    second: {fileID: 2800000, guid: cd9dfa41f530f844c85f20526522fa5d, type: 3}
+    second: {fileID: 2800000, guid: beb0a8cc9b0510c47ae81632878d910b, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

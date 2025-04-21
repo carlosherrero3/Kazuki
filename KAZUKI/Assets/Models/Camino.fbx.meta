@@ -8,17 +8,17 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Cliff_rock_02_BaseColor
-    second: {fileID: 2800000, guid: 45b5a1ab34607e745a49ef6c7b0865e8, type: 3}
+    second: {fileID: 2800000, guid: 206435220ae335c42a81b5d0cac88712, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Cliff_rock_02_Metallic
-    second: {fileID: 2800000, guid: 0825f32096f052340b62b6ce0afcf7fe, type: 3}
+    second: {fileID: 2800000, guid: f8aafb73dd6382c4a9968e06d6918e53, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Cliff_rock_02_Roughness
-    second: {fileID: 2800000, guid: 7db0ebc13d65e0b42a34226d35351baf, type: 3}
+    second: {fileID: 2800000, guid: 57f5708581b9d4643a6b5f727546aa1e, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
