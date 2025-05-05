@@ -5,6 +5,21 @@ ModelImporter:
   internalIDToNameTable: []
   externalObjects:
   - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blossom_Tree-Blossom
+    second: {fileID: 2100000, guid: 6835cfa0109306f4ba67a079c157a77f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blossom_Tree-Leaf
+    second: {fileID: 2100000, guid: 6835cfa0109306f4ba67a079c157a77f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blossom_Tree-Stems
+    second: {fileID: 2100000, guid: 6835cfa0109306f4ba67a079c157a77f, type: 2}
+  - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Bark_02_Colour
