@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Estructura_Inf_CuboMat
-    second: {fileID: 2100000, guid: df7d4b169391c574594ebc122713f7f6, type: 2}
+    second: {fileID: 2100000, guid: 2e195ccf0811f0b4fb29ff4742b3210e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
