@@ -14,7 +14,7 @@ public class Loading : MonoBehaviour
     IEnumerator MakeTheLoad(string level)
     {
         //QUITAR ESTO, ES SOLO PARA PROBAR
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(6f);
 
 
         AsyncOperation operation = SceneManager.LoadSceneAsync(level);
