@@ -10,6 +10,10 @@ public class PlayerMovement : MonoBehaviour
     public new Transform camera;
     public float speed = 4;
     public float gravity = -9.8f;
+    public float jumpForce = 5f;
+
+    private float verticalVelocity = 0f;
+    private bool isJumping = false;
 
     void Start()
     {
@@ -23,7 +27,30 @@ public class PlayerMovement : MonoBehaviour
         float ver = Input.GetAxis("Vertical");
         Vector3 movement = Vector3.zero;
         float movementSpeed = 0;
-        
+
+        bool isRunning = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+        float maxSpeed = isRunning ? 1.0f : 0.5f;
+
+        if (characterController.isGrounded)
+        {
+            if (!isJumping)
+            {
+                verticalVelocity = -1f;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                verticalVelocity = jumpForce;
+                isJumping = true;
+                animator.SetTrigger("Jump");
+                animator.SetBool("IsInAir", true);
+            }
+        }
+        else
+        {
+            verticalVelocity += gravity * Time.deltaTime;
+        }
+
         if (hor != 0 || ver != 0)
         {
             Vector3 forward = camera.forward;
@@ -38,14 +65,21 @@ public class PlayerMovement : MonoBehaviour
             movementSpeed = Mathf.Clamp01(direction.magnitude);
             direction.Normalize();
 
-            movement = direction * speed * movementSpeed * Time.deltaTime;
+            movementSpeed = Mathf.Min(movementSpeed, maxSpeed);
 
+            movement = direction * speed * movementSpeed;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), 0.2f);
         }
 
-        movement.y += gravity * Time.deltaTime;
+        movement.y = verticalVelocity;
+        characterController.Move(movement * Time.deltaTime);
 
-        characterController.Move(movement);
         animator.SetFloat("Speed", movementSpeed);
+
+        if (isJumping && characterController.isGrounded && verticalVelocity < 0f)
+        {
+            isJumping = false;
+            animator.SetBool("IsInAir", false); // se baja al aterrizar
+        }
     }
 }
