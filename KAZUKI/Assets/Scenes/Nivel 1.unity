@@ -2811,6 +2811,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292341749}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &293864680 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4892885825632174834, guid: bf7faea1dd38c86469138ef8d19e814c, type: 3}
+  m_PrefabInstance: {fileID: 644336834}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &295114484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7335,6 +7340,10 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 1124605002}
+    - target: {fileID: 1879428372086153693, guid: bf7faea1dd38c86469138ef8d19e814c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2508445983624009743, guid: bf7faea1dd38c86469138ef8d19e814c, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.696
@@ -7406,7 +7415,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5236794733600823368, guid: bf7faea1dd38c86469138ef8d19e814c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 761790872}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4892885825632174834, guid: bf7faea1dd38c86469138ef8d19e814c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1080081094}
   m_SourcePrefab: {fileID: 100100000, guid: bf7faea1dd38c86469138ef8d19e814c, type: 3}
 --- !u!1 &690254137
 GameObject:
@@ -11241,6 +11253,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5236794733600823368, guid: bf7faea1dd38c86469138ef8d19e814c, type: 3}
   m_PrefabInstance: {fileID: 644336834}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1080081094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293864680}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 704bf27887caae642b811f3d3a459cfd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 1124605002}
+  speed: 4
+  gravity: -9.8
+  jumpHeight: 3
+  groundCheck: {fileID: 0}
+  groundDistance: 0.4
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 8
+  level: 3
+  health: 40
 --- !u!1001 &1083267385
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19160,7 +19195,7 @@ GameObject:
   - component: {fileID: 1778923503}
   - component: {fileID: 1778923505}
   - component: {fileID: 1778923504}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Suelo
   m_TagString: Untagged
   m_Icon: {fileID: 0}

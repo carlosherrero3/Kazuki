@@ -33,14 +33,14 @@ public class SceneChangerButton : MonoBehaviour
     }
 
     public void ChangeScene(int index)
-    {
+    {     
         if (index >= 0 && index < sceneNames.Count && !string.IsNullOrEmpty(sceneNames[index]))
         {
-            SceneManager.LoadScene(sceneNames[index]); // Cambiar a la escena correspondiente
+            LevelLoader.LoadLevel(sceneNames[index]); // Usa el mismo sistema que tu trigger
         }
         else
         {
-            Debug.LogWarning("El nombre de la escena no está configurado o el índice es incorrecto.");
+            Debug.LogWarning("Índice de escena incorrecto o nombre vacío.");
         }
     }
 }
