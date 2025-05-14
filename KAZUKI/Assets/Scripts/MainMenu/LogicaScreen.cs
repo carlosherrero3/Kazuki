@@ -11,7 +11,7 @@ public class LogicaScreen : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public Toggle fullscreenToggle;
+    public Toggle toggle;
 
     //
     public TMP_Dropdown resolucionesDropDown;
@@ -20,17 +20,18 @@ public class LogicaScreen : MonoBehaviour
 
     void Start()
     {
-  
 
-        //
-        RevisarResolucion();
-        //
         // Asegúrate de que el Toggle refleje el estado actual
-        if (fullscreenToggle != null)
+        if (Screen.fullScreen)
         {
-            fullscreenToggle.isOn = Screen.fullScreen;
-            fullscreenToggle.onValueChanged.AddListener(ToggleFullscreen);
+            toggle.isOn = true;
         }
+        else
+        {
+            toggle.isOn = false;
+        }
+
+        RevisarResolucion();
     }
 
     // Update is called once per frame
@@ -39,9 +40,9 @@ public class LogicaScreen : MonoBehaviour
         
     }
 
-    void ToggleFullscreen(bool isFullscreen)
+    public void ActivatePantallaCompleta(bool pantallaCompleta)
     {
-        Screen.fullScreen = isFullscreen;
+        Screen.fullScreen = pantallaCompleta;
     }
 
     //
