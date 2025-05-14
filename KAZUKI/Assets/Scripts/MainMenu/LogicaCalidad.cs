@@ -14,7 +14,7 @@ public class LogicaCalidad : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        calidad = PlayerPrefs.GetInt("numeroDeCalidad", 3);
+        calidad = PlayerPrefs.GetInt("numeroDeCalidad", 5);
         dropdown.value = calidad;
         AjustarCalidad();
         
