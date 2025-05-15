@@ -11356,10 +11356,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1672784147652653222, guid: bf7faea1dd38c86469138ef8d19e814c, type: 3}
+      propertyPath: m_Height
+      value: 0.019
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672784147652653222, guid: bf7faea1dd38c86469138ef8d19e814c, type: 3}
+      propertyPath: m_Center.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672784147652653222, guid: bf7faea1dd38c86469138ef8d19e814c, type: 3}
+      propertyPath: m_SkinWidth
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879428372086153693, guid: bf7faea1dd38c86469138ef8d19e814c, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1879428372086153693, guid: bf7faea1dd38c86469138ef8d19e814c, type: 3}
       propertyPath: camera
       value: 
       objectReference: {fileID: 1124605002}
+    - target: {fileID: 1879428372086153693, guid: bf7faea1dd38c86469138ef8d19e814c, type: 3}
+      propertyPath: jumpForce
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1879428372086153693, guid: bf7faea1dd38c86469138ef8d19e814c, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -11378,27 +11398,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5236794733600823368, guid: bf7faea1dd38c86469138ef8d19e814c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 27.628414
+      value: 23.476969
       objectReference: {fileID: 0}
     - target: {fileID: 5236794733600823368, guid: bf7faea1dd38c86469138ef8d19e814c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 27.628414
+      value: 23.476969
       objectReference: {fileID: 0}
     - target: {fileID: 5236794733600823368, guid: bf7faea1dd38c86469138ef8d19e814c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 27.628414
+      value: 23.476969
       objectReference: {fileID: 0}
     - target: {fileID: 5236794733600823368, guid: bf7faea1dd38c86469138ef8d19e814c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 950.83
+      value: 951.26
       objectReference: {fileID: 0}
     - target: {fileID: 5236794733600823368, guid: bf7faea1dd38c86469138ef8d19e814c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 259.66
+      value: 259.7
       objectReference: {fileID: 0}
     - target: {fileID: 5236794733600823368, guid: bf7faea1dd38c86469138ef8d19e814c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1347.5
+      value: 1333.93
       objectReference: {fileID: 0}
     - target: {fileID: 5236794733600823368, guid: bf7faea1dd38c86469138ef8d19e814c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18671,7 +18691,7 @@ Camera:
     height: 1
   near clip plane: 1
   far clip plane: 10000
-  field of view: 90
+  field of view: 50
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -18717,7 +18737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   follow: {fileID: 761790872}
-  distance: -2
+  distance: -1.2
   sensitivity: {x: 0, y: 0}
 --- !u!1 &1128795228
 GameObject:
