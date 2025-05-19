@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private static PlayerMovement instance;
+
     private CharacterController characterController;
     private Animator animator;
 
@@ -14,6 +16,21 @@ public class PlayerMovement : MonoBehaviour
 
     private float verticalVelocity = 0f;
     private bool isJumping = false;
+
+    void Awake()
+    {
+        // Mantener entre escenas sin duplicar
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
 
     void Start()
     {
