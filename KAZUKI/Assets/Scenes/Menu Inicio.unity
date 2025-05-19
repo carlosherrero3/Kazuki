@@ -3916,7 +3916,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_AlphaFadeSpeed: 10
+  m_AlphaFadeSpeed: 0.15
 --- !u!114 &621239563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6688,7 +6688,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 29.19513, y: 2.1450806}
+  m_AnchoredPosition: {x: 29.195068, y: 2.1450806}
   m_SizeDelta: {x: -966.5106, y: -4.2563}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &963194225
@@ -11145,7 +11145,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 28.429016, y: 2.1437988}
+  m_AnchoredPosition: {x: 28.428955, y: 2.1437988}
   m_SizeDelta: {x: -964.166, y: -4.2539}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1867464190
