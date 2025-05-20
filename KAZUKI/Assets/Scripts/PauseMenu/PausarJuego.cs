@@ -6,13 +6,9 @@ public class PausarJuego : MonoBehaviour
 {
     private bool isPaused = false;
     public GameObject panelPausa;
+    public CameraOrbit cameraOrbitScript; // Referencia al script de la cámara
 
-    void Start()
-    {
-        
-    }
-
-    void Update() //Verifica si el usuario presiona la tecla "Esc".
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -22,23 +18,33 @@ public class PausarJuego : MonoBehaviour
 
     void TogglePause()
     {
-        isPaused = !isPaused; //Cambia el estado a pausa.
-        if (isPaused) //Pausa o reanuda el juego.
+        isPaused = !isPaused;
+        if (isPaused)
         {
-            Time.timeScale = 0f; //Detiene el tiempo
+            Time.timeScale = 0f;
             if (panelPausa != null)
-            {
                 panelPausa.SetActive(true);
-            }
+
+            if (cameraOrbitScript != null)
+                cameraOrbitScript.enabled = false;
+
+            Cursor.lockState = CursorLockMode.None; // <- Desbloquea el cursor
+            Cursor.visible = true; // <- Lo hace visible
+
             Debug.Log("El juego se ha pausado");
         }
         else
         {
-            Time.timeScale = 1f; //Reanuda el tiempo.
+            Time.timeScale = 1f;
             if (panelPausa != null)
-            {
                 panelPausa.SetActive(false);
-            }
+
+            if (cameraOrbitScript != null)
+                cameraOrbitScript.enabled = true;
+
+            Cursor.lockState = CursorLockMode.Locked; // <- Vuelve a bloquear el cursor
+            Cursor.visible = false; // <- Lo oculta
+
             Debug.Log("El juego se ha reanudado");
         }
     }

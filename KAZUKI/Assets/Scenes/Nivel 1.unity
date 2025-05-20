@@ -3985,7 +3985,7 @@ GameObject:
   - component: {fileID: 279357963}
   - component: {fileID: 279357962}
   m_Layer: 0
-  m_Name: SCRIPTS
+  m_Name: '- SCRIPTS -'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4032,6 +4032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelPausa: {fileID: 1506814498}
+  cameraOrbitScript: {fileID: 1124605003}
 --- !u!1001 &282464929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47361,6 +47362,6 @@ SceneRoots:
   - {fileID: 843330828}
   - {fileID: 1355185705}
   - {fileID: 4237315832304755156}
-  - {fileID: 279357961}
   - {fileID: 704366387}
   - {fileID: 630788397}
+  - {fileID: 279357961}
