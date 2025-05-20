@@ -33,6 +33,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Pruebas.unity
     guid: 576c29f9821f5a64e9a12441719ef7da
   - enabled: 1
-    path: Assets/Scenes/Save.unity
+    path: Assets/Scenes/Final.unity
     guid: 9939ad1c8707c9a42891703fa6e9287e
   m_configObjects: {}
