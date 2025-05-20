@@ -9,6 +9,19 @@ public class Brillo : MonoBehaviour
     public float sliderValor;
     public Image panelBrillo;
 
+    private static Brillo instance;
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
     private void Start()
     {
         slider.value = PlayerPrefs.GetFloat("brillo",0f);
