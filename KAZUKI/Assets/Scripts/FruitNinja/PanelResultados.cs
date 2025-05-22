@@ -49,7 +49,7 @@ public class PanelResultados : MonoBehaviour
     private void CambiarANivel1()
     {
         // Destruir el objeto (ej: un efecto de partículas)
-        GameObject objetoADestruir = GameObject.Find("NombreDelObjeto");
+        GameObject objetoADestruir = GameObject.Find("Directional Light");
         if (objetoADestruir != null)
         {
             Destroy(objetoADestruir);
