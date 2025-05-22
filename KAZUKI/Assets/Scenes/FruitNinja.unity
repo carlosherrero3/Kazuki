@@ -207,7 +207,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1442567887}
         m_TargetAssemblyTypeName: Temporizador, Assembly-CSharp
-        m_MethodName: ReiniciarJuego
+        m_MethodName: ReiniciarTemporizador
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -490,7 +490,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -11.444588, y: 0, z: 48.853367, w: -20.027939}
+  m_margin: {x: -49.661957, y: 0, z: 67.254364, w: -46.92171}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -520,7 +520,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -68, y: -37}
+  m_AnchoredPosition: {x: -68, y: -34}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &675265352
@@ -695,14 +695,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1442567888}
-        m_TargetAssemblyTypeName: PanelResultados, Assembly-CSharp
-        m_MethodName: OnMenuPressed
-        m_Mode: 1
+      - m_Target: {fileID: 1442567889}
+        m_TargetAssemblyTypeName: SceneChangerButton, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1598,6 +1598,7 @@ GameObject:
   - component: {fileID: 1442567886}
   - component: {fileID: 1442567887}
   - component: {fileID: 1442567888}
+  - component: {fileID: 1442567889}
   m_Layer: 0
   m_Name: SCRIPTS
   m_TagString: Untagged
@@ -1648,8 +1649,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3371d85cb22a51f468e1b112ac1860df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiempoInicial: 10
-  frutasObjetivo: 5
+  tiempoInicial: 60
+  frutasObjetivo: 65
+  textoContador: {fileID: 411078731}
+  formatoTexto: ' {0}'
+  textoFinal: 0
 --- !u!114 &1442567888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1662,14 +1666,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fde8f0b46ab057a4990ff082a098ada2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelVictoria: {fileID: 0}
-  panelDerrota: {fileID: 0}
+  panelVictoria: {fileID: 1591494682}
+  panelDerrota: {fileID: 883770213}
   textoResultado: {fileID: 1993999721}
   textoFrutas: {fileID: 734751800}
   botonReiniciar: {fileID: 218412365}
   botonSalir: {fileID: 703449090}
   escenaMenu: Menu Inicio
   escenaNivel1: Nivel 1
+--- !u!114 &1442567889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442567884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 839ae638a61d665438e2187089849396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttons:
+  - {fileID: 703449090}
+  sceneNames:
+  - Meni Inicio
 --- !u!1 &1591494682
 GameObject:
   m_ObjectHideFlags: 0

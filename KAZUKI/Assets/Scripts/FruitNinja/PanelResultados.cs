@@ -33,7 +33,7 @@ public class PanelResultados : MonoBehaviour
     public void MostrarVictoria(int frutasCortadas, int frutasObjetivo)
     {
         textoResultado.text = "Enhorabuena, has superado el reto";
-        textoFrutas.text = $" {frutasCortadas} / ";
+        textoFrutas.text = $" {frutasCortadas} / {frutasObjetivo}";
         panelVictoria.SetActive(true);
 
         Invoke(nameof(CambiarANivel1), 2f);
